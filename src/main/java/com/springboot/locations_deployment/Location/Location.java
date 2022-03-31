@@ -11,18 +11,18 @@ import javax.persistence.Table;
 public class Location {
 	@Id
 	@Column
-	@GeneratedValue (strategy = GenerationType.IDENTITY)
-	private String id;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int id;
 	
 	public Location() {
 		super();
 	}
 	@Column
 	private String name;
-	public String getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getName() {

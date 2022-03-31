@@ -2,7 +2,7 @@ package com.springboot.locations_deployment.configurations;
 
 public class DatasourceConfiguration {
 
-    private String url = "jdbc:hsqldb:hsql://hsqldb/test";
+    private String url = "jdbc:hsqldb:hsql://localhost/test";
     private String username = "sa";
     private String password = "";
     
