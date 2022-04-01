@@ -32,7 +32,7 @@ public class LocationController {
    }
    
    @PostMapping("/insertLocation/{id}/{name}")  
-	public Location insertDatabaseRow(@PathVariable("id") String id, @PathVariable("name") String name) {
+	public String insertDatabaseRow(@PathVariable("id") String id, @PathVariable("name") String name) {
 	   return locationService.insert(name);
 	}
    

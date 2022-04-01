@@ -38,9 +38,15 @@ public class LocationService {
 		}
 	}  
 		
-	public Location insert( String name) {
-		Location location = new Location(name);
-		return locationRepository.save(location);
+	public String insert( String name) {
+		try{
+			Location location = new Location(name);
+			return locationRepository.save(location).toString();
+		}catch(Exception e){
+			System.out.println("Exception Occured: " + e);
+			return "Cannot Insert Row due to " + e;
+		}
+		
 	}
 		
 	public String update(String id, String name) {
